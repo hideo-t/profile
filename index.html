@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>高橋秀夫 — 事業ポートフォリオ｜AIの町医者 / PAPA</title>
+<meta name="description" content="異業種30年×自前GPU基盤×4ブランド体制で、中小企業のAI実装を担う高橋秀夫の事業概要。Fractional CAIOおよびAI事業立ち上げのご相談を承ります。">
+<meta property="og:title" content="高橋秀夫 — 事業ポートフォリオ">
+<meta property="og:description" content="異業種30年×自前GPU基盤×4ブランド体制。中小企業のAI実装を翻訳する事業家のプロファイル。">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://hideo-t.github.io/profile/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://hideo-t.github.io/profile/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "高橋 秀夫",
+  "alternateName": "AIの町医者",
+  "jobTitle": "AI事業家 / Fractional CAIO",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "白河市",
+    "addressRegion": "福島県",
+    "addressCountry": "JP"
+  },
+  "url": "https://hideo-t.github.io/profile/",
+  "sameAs": [
+    "https://hideo-t.github.io/aidoctor/",
+    "https://github.com/hideo-t"
+  ],
+  "knowsAbout": ["AI実装","RAG","ローカルLLM","事業立ち上げ","中小企業DX"]
+}
+</script>
+
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --paper:#fafaf7;
+    --line:#1a1a1a;
+    --mute:#666;
+    --accent:#b8412e;
+    --grid:#e8e6df;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Helvetica Neue","Hiragino Sans","Yu Gothic Medium",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.7;
+    font-size:16px;
+    letter-spacing:0.02em;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-weight:600;letter-spacing:0.04em}
+
+  /* HERO */
+  .hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+  .hero .tag{font-size:12px;color:var(--mute);letter-spacing:0.3em;margin-bottom:24px}
+  .hero h1{font-size:clamp(28px,5vw,44px);line-height:1.3;margin-bottom:16px}
+  .hero h1 .en{display:block;font-size:14px;color:var(--mute);letter-spacing:0.15em;margin-top:8px;font-weight:400}
+  .hero .lead{font-size:clamp(16px,2vw,18px);color:var(--ink);max-width:680px;margin-top:24px}
+  .hero .accent{color:var(--accent);font-weight:600}
+
+  /* METRICS BAR */
+  .metrics{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:1px;
+    background:var(--line);
+    margin:48px 0 0;
+    border:1px solid var(--line);
+  }
+  .metric{
+    background:var(--paper);
+    padding:20px 16px;
+    text-align:center;
+  }
+  .metric .num{font-size:24px;font-weight:700;letter-spacing:0.02em}
+  .metric .lbl{font-size:11px;color:var(--mute);margin-top:4px;letter-spacing:0.15em}
+
+  /* SECTION */
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  section .label{
+    font-size:11px;color:var(--accent);
+    letter-spacing:0.4em;margin-bottom:24px;
+  }
+  section h2{font-size:24px;margin-bottom:32px}
+  section p{margin-bottom:16px}
+
+  /* BRAND GRID */
+  .brands{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+  .brand{background:var(--paper);padding:24px}
+  .brand .nm{font-size:18px;font-weight:600;margin-bottom:6px}
+  .brand .role{font-size:11px;color:var(--accent);letter-spacing:0.3em;margin-bottom:12px}
+  .brand .desc{font-size:14px;color:var(--mute);line-height:1.6}
+
+  /* CLIENT TABLE */
+  .clients{width:100%;border-collapse:collapse;margin-top:8px}
+  .clients td,.clients th{
+    padding:14px 8px;
+    border-bottom:1px solid var(--grid);
+    text-align:left;font-size:14px;
+  }
+  .clients th{font-size:11px;color:var(--mute);letter-spacing:0.2em;font-weight:500}
+  .clients tr:last-child td{border-bottom:none}
+  .clients .status{color:var(--accent);font-size:11px;letter-spacing:0.15em}
+
+  /* TECH SPEC */
+  .spec{font-family:"SF Mono","Consolas",monospace;font-size:13px;line-height:1.9;background:#f4f3ef;padding:24px;border:1px solid var(--grid);overflow-x:auto}
+  .spec .k{color:var(--mute)}
+  .spec .v{color:var(--ink)}
+
+  /* LINK ROW */
+  .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px}
+  .links a{
+    color:var(--ink);text-decoration:none;
+    padding:16px;border:1px solid var(--line);
+    display:block;transition:0.15s;
+  }
+  .links a:hover{background:var(--ink);color:var(--paper)}
+  .links .ttl{font-size:14px;font-weight:600;margin-bottom:4px}
+  .links .url{font-size:11px;color:var(--mute);font-family:monospace}
+  .links a:hover .url{color:var(--paper)}
+
+  /* PRINCIPLES */
+  .principles{list-style:none}
+  .principles li{
+    padding:12px 0 12px 28px;
+    border-bottom:1px solid var(--grid);
+    position:relative;
+    font-size:15px;
+  }
+  .principles li:before{
+    content:"—";color:var(--accent);
+    position:absolute;left:0;font-weight:700;
+  }
+  .principles li:last-child{border-bottom:none}
+
+  /* CAREER */
+  .career{position:relative;padding-left:24px}
+  .career:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:1px;background:var(--line)}
+  .career-item{position:relative;padding:12px 0 12px 16px;margin-bottom:8px}
+  .career-item:before{content:"";position:absolute;left:-21px;top:18px;width:9px;height:9px;background:var(--paper);border:2px solid var(--ink);border-radius:50%}
+  .career-item .yr{font-size:11px;color:var(--accent);letter-spacing:0.2em;font-family:monospace}
+  .career-item .ttl{font-size:15px;margin-top:4px}
+  .career-item .nt{font-size:13px;color:var(--mute);margin-top:2px}
+
+  /* CONTACT */
+  .contact{padding:64px 0}
+  .contact h2{margin-bottom:16px}
+  .contact .lead{font-size:18px;margin-bottom:32px;max-width:600px}
+  .contact a.cta{
+    display:inline-block;padding:16px 32px;
+    background:var(--ink);color:var(--paper);
+    text-decoration:none;font-size:14px;letter-spacing:0.2em;
+    transition:0.15s;
+  }
+  .contact a.cta:hover{background:var(--accent)}
+  .contact .sub{margin-top:24px;font-size:13px;color:var(--mute)}
+  .contact .sub a{color:var(--ink)}
+
+  /* FOOTER */
+  footer{padding:32px 0;font-size:12px;color:var(--mute);border-top:1px solid var(--line);text-align:center}
+  footer a{color:var(--mute)}
+
+  @media(max-width:600px){
+    .hero{padding:48px 0 40px}
+    section{padding:48px 0}
+    .clients td,.clients th{padding:10px 4px;font-size:13px}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<!-- HERO -->
+<header class="hero">
+  <div class="tag">PROFILE / BUSINESS PORTFOLIO</div>
+  <h1>
+    高橋 秀夫
+    <span class="en">HIDEO TAKAHASHI &nbsp;·&nbsp; AIの町医者 / PAPA</span>
+  </h1>
+  <p class="lead">
+    異業種30年 × 1980年代IT基礎 × 2024年からのAI実装。<br>
+    自前GPU基盤と4ブランド体制で、<span class="accent">中小企業のAIを「現場の言葉」に翻訳する</span>事業家。
+    福島県白河市を拠点に、Fractional CAIOおよびAI事業立ち上げをお引き受けしています。
+  </p>
+
+  <div class="metrics">
+    <div class="metric"><div class="num">6</div><div class="lbl">CLIENTS</div></div>
+    <div class="metric"><div class="num">4</div><div class="lbl">BRANDS</div></div>
+    <div class="metric"><div class="num">230+</div><div class="lbl">REPOS</div></div>
+    <div class="metric"><div class="num">4</div><div class="lbl">STORES</div></div>
+    <div class="metric"><div class="num">8,100</div><div class="lbl">RAG ENTRIES</div></div>
+  </div>
+</header>
+
+<!-- POSITIONING -->
+<section>
+  <div class="label">POSITIONING</div>
+  <h2>「現場で動くAI」を翻訳する町医者</h2>
+  <p>
+    自動車ディーラー、不動産、飲食、ドローン、音響——
+    AIネイティブ世代が持たない<strong>現場の段取り感覚</strong>を、
+    1980年代のIT基礎と現代のAIスタックで橋渡しします。
+  </p>
+  <p>
+    GPT/Claudeを単に使うのではなく、自前のGPUサーバ（RTX 5090 + RTX 5080）で
+    ローカルLLMを運用し、4階層のルーティング設計で
+    コスト・速度・データ主権を最適化する実装力を持っています。
+  </p>
+</section>
+
+<!-- BRANDS -->
+<section>
+  <div class="label">BRAND PORTFOLIO</div>
+  <h2>ラベル剥がし業 — 4本柱</h2>
+  <p style="margin-bottom:32px;color:var(--mute);font-size:14px">
+    それぞれが独立した事業体として、特定の<em>世間の偏見</em>を剥がすために設計されています。
+  </p>
+  <div class="brands">
+    <div class="brand">
+      <div class="nm">AIの町医者</div>
+      <div class="role">CONSULT</div>
+      <div class="desc">「AIは無理」→「可能」<br>中小企業向けAI導入相談</div>
+    </div>
+    <div class="brand">
+      <div class="nm">願い灯</div>
+      <div class="role">RETAIL × AI</div>
+      <div class="desc">「AI占いは怪しい」→「怪しくない」<br>AI手相店舗、4店舗稼働中</div>
+    </div>
+    <div class="brand">
+      <div class="nm">ダメAI七福神</div>
+      <div class="role">CONTENT</div>
+      <div class="desc">「失敗AIは無価値」→「面白くて正直」<br>キャラクター事業</div>
+    </div>
+    <div class="brand">
+      <div class="nm">デジタルゴミ拾い</div>
+      <div class="role">RESEARCH</div>
+      <div class="desc">「Google=全て」→「外側にも世界がある」<br>非主流情報源の発掘</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section>
+  <div class="label">ACTIVE ENGAGEMENTS</div>
+  <h2>稼働中クライアント</h2>
+  <table class="clients">
+    <thead>
+      <tr><th>CLIENT</th><th>SCOPE</th><th>STATUS</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>株式会社パークホームズオキナワ</strong><br><span style="color:var(--mute);font-size:12px">トレーラーハウス製造・販売</span></td>
+        <td>FAQ/RAG基盤（8,100問）<br>サイトリニューアル / AI見積</td>
+        <td><span class="status">月額顧問</span></td>
+      </tr>
+      <tr>
+        <td><strong>株式会社ユアソリューションズ</strong><br><span style="color:var(--mute);font-size:12px">IT・SIer（仙台・東京）</span></td>
+        <td>Fractional CAIO / AI部門立ち上げ</td>
+        <td><span class="status">商談進行中</span></td>
+      </tr>
+      <tr>
+        <td><strong>三昌プロダクション</strong><br><span style="color:var(--mute);font-size:12px">演芸事務所</span></td>
+        <td>外部デザイン顧問</td>
+        <td><span class="status">月額顧問</span></td>
+      </tr>
+      <tr>
+        <td><strong>んだばい</strong><br><span style="color:var(--mute);font-size:12px">国際物販・演奏</span></td>
+        <td>国際デジタルマネージャー</td>
+        <td><span class="status">成果連動</span></td>
+      </tr>
+      <tr>
+        <td><strong>ふくとんぼ</strong><br><span style="color:var(--mute);font-size:12px">福祉事業</span></td>
+        <td>B型支援領域</td>
+        <td><span class="status">稼働中</span></td>
+      </tr>
+      <tr>
+        <td><strong>居酒屋 北海</strong><br><span style="color:var(--mute);font-size:12px">飲食</span></td>
+        <td>店舗運営支援</td>
+        <td><span class="status">稼働中</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- TECH INFRASTRUCTURE -->
+<section>
+  <div class="label">TECHNICAL INFRASTRUCTURE</div>
+  <h2>自前推論基盤「kamisama」</h2>
+  <p style="margin-bottom:24px">
+    クラウド依存ではなく、福島の自宅にGPUサーバを構築。
+    データ主権・コスト最適化・低レイテンシを同時に実現しています。
+  </p>
+  <div class="spec">
+<span class="k">SERVER       </span> <span class="v">kamisama @ 福島</span><br>
+<span class="k">GPU          </span> <span class="v">RTX 5090 (32GB) + RTX 5080 (16GB)</span><br>
+<span class="k">LOCAL LLM    </span> <span class="v">Nemotron-Nano-9B-JP : 8081</span><br>
+<span class="k">             </span> <span class="v">Gemma-3-12B         : 8082</span><br>
+<span class="k">             </span> <span class="v">llama.cpp backend</span><br>
+<span class="k">ROUTING      </span> <span class="v">Qwen Flash → DeepSeek → MiniMax → Claude Opus</span><br>
+<span class="k">GATEWAY      </span> <span class="v">OpenClaw</span><br>
+<span class="k">VOICE        </span> <span class="v">VOICEVOX</span><br>
+<span class="k">IMAGE        </span> <span class="v">Stable Diffusion (RTX 5090)</span><br>
+<span class="k">CODE ASSETS  </span> <span class="v">GitHub 230+ repositories</span><br>
+<span class="k">DAW (sub)    </span> <span class="v">MacBook Pro M2 Pro</span>
+  </div>
+</section>
+
+<!-- PUBLIC ASSETS -->
+<section>
+  <div class="label">PUBLIC ASSETS</div>
+  <h2>公開資産・メディア</h2>
+  <div class="links">
+    <a href="https://hideo-t.github.io/aidoctor/" target="_blank" rel="noopener">
+      <div class="ttl">AIの町医者（フロント）</div>
+      <div class="url">hideo-t.github.io/aidoctor/</div>
+    </a>
+    <a href="https://github.com/hideo-t" target="_blank" rel="noopener">
+      <div class="ttl">GitHub（230+ repos）</div>
+      <div class="url">github.com/hideo-t</div>
+    </a>
+    <a href="https://youtube.com/channel/UCt-pc_NlSK8X2K1ZPX6InCg" target="_blank" rel="noopener">
+      <div class="ttl">AIの町医者ニュース</div>
+      <div class="url">YouTube・毎日更新</div>
+    </a>
+    <a href="https://sites.google.com/wkjp.net/negaibi" target="_blank" rel="noopener">
+      <div class="ttl">願い灯（AI手相）</div>
+      <div class="url">FC加盟受付中・4店舗稼働</div>
+    </a>
+    <a href="https://hideo-t.github.io/negaibi-tesou/" target="_blank" rel="noopener">
+      <div class="ttl">願い灯 本店</div>
+      <div class="url">福島県白河市五郎窪38-1</div>
+    </a>
+    <a href="#contact">
+      <div class="ttl">ウルトラFM 86.8MHz</div>
+      <div class="url">毎週金 19:00 レギュラー放送</div>
+    </a>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section>
+  <div class="label">METHODOLOGY</div>
+  <h2>営業手法と事業ポリシー</h2>
+  <p style="margin-bottom:24px">
+    <strong>Show and Close</strong>——商談から数時間以内に動くプロトタイプを提示する手法。
+    原則は<strong>「主語・看板・設計の3点一致」</strong>。
+  </p>
+  <ul class="principles">
+    <li>下請けはしない</li>
+    <li>雇用関係を持たない</li>
+    <li>金銭条件を先に確定する</li>
+    <li>名誉職を引き受けない</li>
+    <li>完全リモートを前提とする</li>
+    <li>象の力を借りるハエ — invisible × invisible = visible</li>
+  </ul>
+</section>
+
+<!-- CAREER -->
+<section>
+  <div class="label">CAREER</div>
+  <h2>経歴</h2>
+  <div class="career">
+    <div class="career-item">
+      <div class="yr">1980s</div>
+      <div class="ttl">IT（第1期）</div>
+      <div class="nt">アセンブラ、COBOL／基本情報技術者試験</div>
+    </div>
+    <div class="career-item">
+      <div class="yr">1990s — 2024</div>
+      <div class="ttl">異業種30年</div>
+      <div class="nt">自動車ディーラー（トヨタ系・営業／店長／本社企画課長）／不動産売買・賃貸／飲食店舗運用／産業ドローン運用／PA・DAW講師・編曲</div>
+    </div>
+    <div class="career-item">
+      <div class="yr">2024.10 —</div>
+      <div class="ttl">IT（第2期）／AI事業</div>
+      <div class="nt">AIの町医者 / PAPA として再起動。19ヶ月で6社稼働・4ブランド・GPU基盤・230リポを構築</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact" style="border-bottom:none">
+  <div class="label">CONTACT</div>
+  <h2>ご相談・お問い合わせ</h2>
+  <p class="lead">
+    Fractional CAIO、AI事業立ち上げ、サイトリニューアル、
+    自動化・省力化のご相談を承ります。
+    金銭条件を先に確定する方針のため、ご相談時にご予算感をお伝えください。
+  </p>
+  <a class="cta" href="mailto:hdxrope@gmail.com">EMAIL でご相談</a>
+  <div class="sub">
+    Email: <a href="mailto:hdxrope@gmail.com">hdxrope@gmail.com</a><br>
+    所在地: 福島県白河市萱根長木原5-1<br>
+    対応エリア: 全国（完全リモート可、必要に応じて出張）
+  </div>
+</section>
+
+</div>
+
+<footer>
+  © 2026 高橋秀夫 / AIの町医者 — Last updated: 2026.05
+</footer>
+
+</body>
+</html>
