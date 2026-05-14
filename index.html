@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>高橋秀夫 — 事業ポートフォリオ｜AIの町医者 / PAPA</title>
-<meta name="description" content="異業種30年×自前GPU基盤×4ブランド体制で、中小企業のAI実装を担う高橋秀夫の事業概要。Fractional CAIOおよびAI事業立ち上げのご相談を承ります。">
-<meta property="og:title" content="高橋秀夫 — 事業ポートフォリオ">
-<meta property="og:description" content="異業種30年×自前GPU基盤×4ブランド体制。中小企業のAI実装を翻訳する事業家のプロファイル。">
+<title>高橋秀夫 — AIの町医者 / 三晶プロダクション後見役</title>
+<meta name="description" content="独立系AI事業家・Fractional CAIO。自前GPU基盤と4ブランド体制で中小企業のAI実装を担う「AIの町医者」。並行して福島・白河で三晶プロダクション後見役（落語家・三遊亭円左衛門 主宰）を勤める。AIに最も奪われない芸能と、AI戦略の現場を行き来する。">
+<meta property="og:title" content="高橋秀夫 — AIの町医者 / 三晶プロダクション後見役">
+<meta property="og:description" content="AIの町医者として中小企業のAI実装を翻訳しながら、白河で三晶プロダクション後見役を勤める。AIに最も奪われない芸能と、AI戦略の現場を行き来する事業家のプロファイル。">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://hideo-t.github.io/profile/">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,8 +17,8 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "高橋 秀夫",
-  "alternateName": "AIの町医者",
-  "jobTitle": "AI事業家 / Fractional CAIO",
+  "alternateName": ["AIの町医者", "白河の黒衣"],
+  "jobTitle": "AI事業家 / Fractional CAIO / Founding Producer (Mitsu Akira Production)",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "白河市",
@@ -28,9 +28,10 @@
   "url": "https://hideo-t.github.io/profile/",
   "sameAs": [
     "https://hideo-t.github.io/aidoctor/",
+    "https://hideo-t.github.io/mitsuakira-pro/",
     "https://github.com/hideo-t"
   ],
-  "knowsAbout": ["AI実装","RAG","ローカルLLM","事業立ち上げ","中小企業DX"]
+  "knowsAbout": ["AI実装","RAG","ローカルLLM","事業立ち上げ","中小企業DX","古典芸能","落語","地域文化基盤","制度設計"]
 }
 </script>
 
@@ -90,12 +91,132 @@
   section h2{font-size:24px;margin-bottom:32px}
   section p{margin-bottom:16px}
 
+  /* PULL QUOTE */
+  .pull-quote{
+    padding:48px 0;
+    border-bottom:1px solid var(--line);
+    text-align:center;
+  }
+  .pull-quote blockquote{
+    font-size:clamp(18px,2.4vw,22px);
+    line-height:1.6;
+    color:var(--ink);
+    max-width:720px;
+    margin:0 auto;
+    font-weight:500;
+    letter-spacing:0.04em;
+  }
+  .pull-quote cite{
+    display:block;
+    margin-top:20px;
+    font-size:11px;
+    color:var(--mute);
+    letter-spacing:0.3em;
+    font-style:normal;
+  }
+
+  /* DUAL AXIS */
+  .dual{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-top:32px;
+  }
+  .dual-col{
+    background:var(--paper);
+    padding:32px 24px;
+  }
+  .dual-col .axis-label{
+    font-size:11px;
+    color:var(--accent);
+    letter-spacing:0.3em;
+    margin-bottom:12px;
+  }
+  .dual-col h3{
+    font-size:18px;
+    margin-bottom:16px;
+    line-height:1.4;
+  }
+  .dual-col p{
+    font-size:14px;
+    color:var(--mute);
+    line-height:1.7;
+  }
+  @media(max-width:600px){
+    .dual{grid-template-columns:1fr}
+  }
+
   /* BRAND GRID */
   .brands{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
   .brand{background:var(--paper);padding:24px}
   .brand .nm{font-size:18px;font-weight:600;margin-bottom:6px}
   .brand .role{font-size:11px;color:var(--accent);letter-spacing:0.3em;margin-bottom:12px}
   .brand .desc{font-size:14px;color:var(--mute);line-height:1.6}
+
+  /* CULTURAL ENGAGEMENT */
+  .cultural{
+    background:#f4f3ef;
+    border:1px solid var(--grid);
+    padding:32px;
+    margin-top:8px;
+  }
+  .cultural h3{
+    font-size:20px;
+    margin-bottom:8px;
+    letter-spacing:0.04em;
+  }
+  .cultural .sub{
+    font-size:12px;
+    color:var(--accent);
+    letter-spacing:0.3em;
+    margin-bottom:24px;
+  }
+  .cultural p{
+    font-size:15px;
+    margin-bottom:16px;
+  }
+  .cultural .deeds{
+    list-style:none;
+    margin-top:16px;
+    padding-left:0;
+  }
+  .cultural .deeds li{
+    padding:8px 0 8px 24px;
+    border-bottom:1px solid var(--grid);
+    position:relative;
+    font-size:14px;
+  }
+  .cultural .deeds li:before{
+    content:"○";
+    color:var(--accent);
+    position:absolute;
+    left:0;
+    font-size:11px;
+    top:12px;
+  }
+  .cultural .deeds li:last-child{border-bottom:none}
+  .cultural .cta-row{
+    margin-top:24px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .cultural .cta-row a{
+    display:inline-block;
+    padding:10px 18px;
+    border:1px solid var(--ink);
+    color:var(--ink);
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:0.1em;
+    transition:0.15s;
+  }
+  .cultural .cta-row a:hover{
+    background:var(--ink);
+    color:var(--paper);
+  }
 
   /* CLIENT TABLE */
   .clients{width:100%;border-collapse:collapse;margin-top:8px}
@@ -170,6 +291,7 @@
     .hero{padding:48px 0 40px}
     section{padding:48px 0}
     .clients td,.clients th{padding:10px 4px;font-size:13px}
+    .cultural{padding:24px 20px}
   }
 </style>
 </head>
@@ -179,15 +301,15 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="tag">PROFILE / BUSINESS PORTFOLIO</div>
+  <div class="tag">PROFILE / DUAL ENGAGEMENT</div>
   <h1>
     高橋 秀夫
-    <span class="en">HIDEO TAKAHASHI &nbsp;·&nbsp; AIの町医者 / PAPA</span>
+    <span class="en">HIDEO TAKAHASHI &nbsp;·&nbsp; AIの町医者 × 白河の黒衣</span>
   </h1>
   <p class="lead">
     異業種30年 × 1980年代IT基礎 × 2024年からのAI実装。<br>
-    自前GPU基盤と4ブランド体制で、<span class="accent">中小企業のAIを「現場の言葉」に翻訳する</span>事業家。
-    福島県白河市を拠点に、Fractional CAIOおよびAI事業立ち上げをお引き受けしています。
+    自前GPU基盤と4ブランド体制で、<span class="accent">中小企業のAIを「現場の言葉」に翻訳する町医者。</span><br>
+    並行して、福島・白河で<span class="accent">三晶プロダクション後見役</span>として、AIに最も奪われない芸能（落語）を育てる側を勤めています。
   </p>
 
   <div class="metrics">
@@ -196,24 +318,57 @@
     <div class="metric"><div class="num">230+</div><div class="lbl">REPOS</div></div>
     <div class="metric"><div class="num">4</div><div class="lbl">STORES</div></div>
     <div class="metric"><div class="num">8,100</div><div class="lbl">RAG ENTRIES</div></div>
+    <div class="metric"><div class="num">1</div><div class="lbl">後見役 / 白河</div></div>
   </div>
 </header>
 
-<!-- POSITIONING -->
+<!-- POSITIONING (Dual-axis) -->
 <section>
   <div class="label">POSITIONING</div>
-  <h2>「現場で動くAI」を翻訳する町医者</h2>
+  <h2>町医者と黒衣 — 二本の柱で立つ</h2>
   <p>
-    自動車ディーラー、不動産、飲食、ドローン、音響——
-    AIネイティブ世代が持たない<strong>現場の段取り感覚</strong>を、
-    1980年代のIT基礎と現代のAIスタックで橋渡しします。
+    現代の経営顧問に求められる役割は、最新技術を解説することではなく、
+    <strong>最新技術に惑わされない判断軸を共に持つこと</strong>。
+    そして、AIで効率化を語る人間ほど、<strong>AIに最も奪われない領域</strong>に本気で投資している必要がある——
+    そう考え、二本の柱で立つ生き方を選んでいます。
   </p>
-  <p>
-    GPT/Claudeを単に使うのではなく、自前のGPUサーバ（RTX 5090 + RTX 5080）で
-    ローカルLLMを運用し、4階層のルーティング設計で
-    コスト・速度・データ主権を最適化する実装力を持っています。
-  </p>
+
+  <div class="dual">
+    <div class="dual-col">
+      <div class="axis-label">AXIS Ⅰ — AI実装</div>
+      <h3>AIの町医者として</h3>
+      <p>
+        自動車ディーラー、不動産、飲食、ドローン、音響——
+        AIネイティブ世代が持たない<strong>現場の段取り感覚</strong>を、
+        1980年代のIT基礎と現代のAIスタックで橋渡しする。
+        GPT/Claudeを単に使うのではなく、自前のGPUサーバ（RTX 5090 + RTX 5080）でローカルLLMを運用し、
+        4階層のルーティング設計で<strong>コスト・速度・データ主権</strong>を最適化する。
+      </p>
+    </div>
+    <div class="dual-col">
+      <div class="axis-label">AXIS Ⅱ — 文化後見</div>
+      <h3>白河の黒衣として</h3>
+      <p>
+        2026年、福島・白河で三晶プロダクション設立に企画段階から参画。
+        落語家・三遊亭円左衛門師匠を主宰に、<strong>若手落語家を世界へ送り出す事務所</strong>を、
+        道場・コンテスト・海外展開まで一体で設計。
+        社長職をお引き受けいただいたのは地域の有力者。自身は<strong>黒衣</strong>に徹し、運営と制度設計を裏方で担う。
+      </p>
+    </div>
+  </div>
 </section>
+
+<!-- PULL QUOTE -->
+<div class="wrap">
+<div class="pull-quote">
+  <blockquote>
+    AIに最も奪われない芸能と、<br>
+    AI戦略の現場を行き来する。<br>
+    両方の仕事の核は、<strong>自分を消すこと</strong>にある。
+  </blockquote>
+  <cite>— PHILOSOPHY</cite>
+</div>
+</div>
 
 <!-- BRANDS -->
 <section>
@@ -246,6 +401,42 @@
   </div>
 </section>
 
+<!-- CULTURAL ENGAGEMENT (NEW) -->
+<section>
+  <div class="label">CULTURAL ENGAGEMENT</div>
+  <h2>白河の黒衣 — 三晶プロダクション後見役</h2>
+
+  <div class="cultural">
+    <h3>三晶プロダクション / Mitsu Akira Production</h3>
+    <div class="sub">FOUNDED 2026.01 — SHIRAKAWA, FUKUSHIMA</div>
+    <p>
+      落語家・三遊亭円左衛門師匠を主宰とする、<strong>白河発の若手落語家育成事務所</strong>。
+      「白河から、落語のモンスターを」を志に、国内のみならずアジア・世界へ通用する才能を送り出すことを掲げる。
+    </p>
+    <p>
+      2026年1月の設立に企画段階から参画。社長職をお引き受けいただいたのは白河の地域有力者。
+      自身は<strong>創設プロデューサー（黒衣）</strong>として、運営・制度設計・サイト構築・海外展開枠組みを裏方で担う。
+    </p>
+
+    <ul class="deeds">
+      <li>落語道場「道場小路」設計・運営支援（2026年秋開講予定）</li>
+      <li>第1回 三晶プロダクション杯 落語コンテスト企画（2027年5月本選／海外の部含む）</li>
+      <li>サイト・LINE導線・サポーター制度設計</li>
+      <li>海外オンライン審査の枠組み構築（英語・現地語対応）</li>
+    </ul>
+
+    <div class="cta-row">
+      <a href="https://hideo-t.github.io/mitsuakira-pro/" target="_blank" rel="noopener">三晶プロダクション 公式サイト ↗</a>
+    </div>
+  </div>
+
+  <p style="margin-top:32px;color:var(--mute);font-size:14px;line-height:1.8">
+    落語はAIに最も奪われない芸能のひとつ。呼吸、間、即興、身体性——いずれもAIが置き換えられない領域に属する。
+    最も人間的なものに本気で投資しながら、AI領域で経営の意思決定を支援する。
+    この両極を矛盾なく往復することが、現代の経営顧問に求められる人格の幅であると考えている。
+  </p>
+</section>
+
 <!-- CLIENTS -->
 <section>
   <div class="label">ACTIVE ENGAGEMENTS</div>
@@ -266,9 +457,9 @@
         <td><span class="status">商談進行中</span></td>
       </tr>
       <tr>
-        <td><strong>三昌プロダクション</strong><br><span style="color:var(--mute);font-size:12px">演芸事務所</span></td>
-        <td>外部デザイン顧問</td>
-        <td><span class="status">月額顧問</span></td>
+        <td><strong>三晶プロダクション</strong><br><span style="color:var(--mute);font-size:12px">落語事務所（白河）</span></td>
+        <td>創設プロデューサー・後見役<br>運営／制度設計／海外展開</td>
+        <td><span class="status">設立参画</span></td>
       </tr>
       <tr>
         <td><strong>んだばい</strong><br><span style="color:var(--mute);font-size:12px">国際物販・演奏</span></td>
@@ -312,6 +503,53 @@
   </div>
 </section>
 
+<!-- METHODOLOGY -->
+<section>
+  <div class="label">METHODOLOGY</div>
+  <h2>営業手法と事業ポリシー</h2>
+  <p style="margin-bottom:24px">
+    <strong>Show and Close</strong>——商談から数時間以内に動くプロトタイプを提示する手法。
+    原則は<strong>「主語・看板・設計の3点一致」</strong>。
+  </p>
+  <ul class="principles">
+    <li>下請けはしない</li>
+    <li>雇用関係を持たない</li>
+    <li>金銭条件を先に確定する</li>
+    <li>名誉職を引き受けない（後見役は実権を伴う裏方であり、名誉職ではない）</li>
+    <li>完全リモートを前提とする</li>
+    <li>象の力を借りるハエ — invisible × invisible = visible</li>
+    <li>白河では黒衣を勤める</li>
+  </ul>
+</section>
+
+<!-- CAREER -->
+<section>
+  <div class="label">CAREER</div>
+  <h2>経歴</h2>
+  <div class="career">
+    <div class="career-item">
+      <div class="yr">1980s</div>
+      <div class="ttl">IT（第1期）</div>
+      <div class="nt">アセンブラ、COBOL／基本情報技術者試験</div>
+    </div>
+    <div class="career-item">
+      <div class="yr">1990s — 2024</div>
+      <div class="ttl">異業種30年</div>
+      <div class="nt">自動車ディーラー（トヨタ系・営業／店長／本社企画課長）／不動産売買・賃貸／飲食店舗運用／産業ドローン運用／PA・DAW講師・編曲</div>
+    </div>
+    <div class="career-item">
+      <div class="yr">2024.10 —</div>
+      <div class="ttl">IT（第2期）／AI事業</div>
+      <div class="nt">AIの町医者 / PAPA として再起動。19ヶ月で6社稼働・4ブランド・GPU基盤・230リポを構築</div>
+    </div>
+    <div class="career-item">
+      <div class="yr">2026.01 —</div>
+      <div class="ttl">三晶プロダクション 創設参画 / 後見役</div>
+      <div class="nt">福島・白河発の落語家育成事務所。三遊亭円左衛門師匠を主宰に、若手育成と海外展開の制度設計を裏方で担う</div>
+    </div>
+  </div>
+</section>
+
 <!-- PUBLIC ASSETS -->
 <section>
   <div class="label">PUBLIC ASSETS</div>
@@ -320,6 +558,10 @@
     <a href="https://hideo-t.github.io/aidoctor/" target="_blank" rel="noopener">
       <div class="ttl">AIの町医者（フロント）</div>
       <div class="url">hideo-t.github.io/aidoctor/</div>
+    </a>
+    <a href="https://hideo-t.github.io/mitsuakira-pro/" target="_blank" rel="noopener">
+      <div class="ttl">三晶プロダクション 公式</div>
+      <div class="url">hideo-t.github.io/mitsuakira-pro/</div>
     </a>
     <a href="https://github.com/hideo-t" target="_blank" rel="noopener">
       <div class="ttl">GitHub（230+ repos）</div>
@@ -344,54 +586,13 @@
   </div>
 </section>
 
-<!-- METHODOLOGY -->
-<section>
-  <div class="label">METHODOLOGY</div>
-  <h2>営業手法と事業ポリシー</h2>
-  <p style="margin-bottom:24px">
-    <strong>Show and Close</strong>——商談から数時間以内に動くプロトタイプを提示する手法。
-    原則は<strong>「主語・看板・設計の3点一致」</strong>。
-  </p>
-  <ul class="principles">
-    <li>下請けはしない</li>
-    <li>雇用関係を持たない</li>
-    <li>金銭条件を先に確定する</li>
-    <li>名誉職を引き受けない</li>
-    <li>完全リモートを前提とする</li>
-    <li>象の力を借りるハエ — invisible × invisible = visible</li>
-  </ul>
-</section>
-
-<!-- CAREER -->
-<section>
-  <div class="label">CAREER</div>
-  <h2>経歴</h2>
-  <div class="career">
-    <div class="career-item">
-      <div class="yr">1980s</div>
-      <div class="ttl">IT（第1期）</div>
-      <div class="nt">アセンブラ、COBOL／基本情報技術者試験</div>
-    </div>
-    <div class="career-item">
-      <div class="yr">1990s — 2024</div>
-      <div class="ttl">異業種30年</div>
-      <div class="nt">自動車ディーラー（トヨタ系・営業／店長／本社企画課長）／不動産売買・賃貸／飲食店舗運用／産業ドローン運用／PA・DAW講師・編曲</div>
-    </div>
-    <div class="career-item">
-      <div class="yr">2024.10 —</div>
-      <div class="ttl">IT（第2期）／AI事業</div>
-      <div class="nt">AIの町医者 / PAPA として再起動。19ヶ月で6社稼働・4ブランド・GPU基盤・230リポを構築</div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact" class="contact" style="border-bottom:none">
   <div class="label">CONTACT</div>
   <h2>ご相談・お問い合わせ</h2>
   <p class="lead">
-    Fractional CAIO、AI事業立ち上げ、サイトリニューアル、
-    自動化・省力化のご相談を承ります。
+    Fractional CAIO、AI事業立ち上げ、サイトリニューアル、自動化・省力化のご相談を承ります。
+    地域文化基盤・後見役としてのご相談も、内容により承ります。<br>
     金銭条件を先に確定する方針のため、ご相談時にご予算感をお伝えください。
   </p>
   <a class="cta" href="mailto:hdxrope@gmail.com">EMAIL でご相談</a>
@@ -405,7 +606,7 @@
 </div>
 
 <footer>
-  © 2026 高橋秀夫 / AIの町医者 — Last updated: 2026.05
+  © 2026 高橋秀夫 / AIの町医者 × 白河の黒衣 — Last updated: 2026.05
 </footer>
 
 </body>
