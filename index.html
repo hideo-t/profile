@@ -3,640 +3,313 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>高橋秀夫 — AIの町医者 / 三晶プロダクション後見役</title>
-<meta name="description" content="独立系AI事業家・Fractional CAIO。自前GPU基盤と4ブランド体制で中小企業のAI実装を担う「AIの町医者」。並行して福島・白河で三晶プロダクション後見役（落語家・三遊亭円左衛門 主宰）を勤める。AIに最も奪われない芸能と、AI戦略の現場を行き来する。">
-<meta property="og:title" content="高橋秀夫 — AIの町医者 / 三晶プロダクション後見役">
-<meta property="og:description" content="AIの町医者として中小企業のAI実装を翻訳しながら、白河で三晶プロダクション後見役を勤める。AIに最も奪われない芸能と、AI戦略の現場を行き来する事業家のプロファイル。">
-<meta property="og:type" content="profile">
-<meta property="og:url" content="https://hideo-t.github.io/profile/">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://hideo-t.github.io/profile/">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "高橋 秀夫",
-  "alternateName": ["AIの町医者", "白河の黒衣"],
-  "jobTitle": "AI事業家 / Fractional CAIO / Founding Producer (Mitsu Akira Production)",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "白河市",
-    "addressRegion": "福島県",
-    "addressCountry": "JP"
-  },
-  "url": "https://hideo-t.github.io/profile/",
-  "sameAs": [
-    "https://hideo-t.github.io/aidoctor/",
-    "https://hideo-t.github.io/mitsuakira-pro/",
-    "https://github.com/hideo-t"
-  ],
-  "knowsAbout": ["AI実装","RAG","ローカルLLM","事業立ち上げ","中小企業DX","古典芸能","落語","地域文化基盤","制度設計"]
-}
-</script>
-
+<title>高橋秀夫 — Technical Profile</title>
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ink:#0a0a0a;
-    --paper:#fafaf7;
-    --line:#1a1a1a;
-    --mute:#666;
-    --accent:#b8412e;
-    --grid:#e8e6df;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:"Helvetica Neue","Hiragino Sans","Yu Gothic Medium",system-ui,sans-serif;
-    color:var(--ink);
-    background:var(--paper);
-    line-height:1.7;
-    font-size:16px;
-    letter-spacing:0.02em;
-  }
-  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-weight:600;letter-spacing:0.04em}
+:root {
+  --bg: #0a0a0c;
+  --surface: #121215;
+  --border: #1e1e24;
+  --text: #e0e0e4;
+  --text-dim: #888892;
+  --accent: #4a9eff;
+  --accent2: #22c55e;
+  --accent3: #f59e0b;
+  --tag-bg: rgba(74,158,255,0.1);
+  --tag-border: rgba(74,158,255,0.25);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Noto Sans JP',sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
+.container { max-width:820px; margin:0 auto; padding:40px 24px 80px; }
 
-  /* HERO */
-  .hero{padding:72px 0 56px;border-bottom:1px solid var(--line);position:relative}
-  .hero .tag{font-size:12px;color:var(--mute);letter-spacing:0.3em;margin-bottom:24px}
-  .hero h1{font-size:clamp(28px,5vw,44px);line-height:1.3;margin-bottom:16px}
-  .hero h1 .en{display:block;font-size:14px;color:var(--mute);letter-spacing:0.15em;margin-top:8px;font-weight:400}
-  .hero .lead{font-size:clamp(16px,2vw,18px);color:var(--ink);max-width:680px;margin-top:24px}
-  .hero .accent{color:var(--accent);font-weight:600}
-  .hero .avatar{
-    position:absolute;
-    top:64px;
-    right:0;
-    width:88px;
-    height:88px;
-    border-radius:50%;
-    object-fit:cover;
-    border:1px solid var(--grid);
-    opacity:0.85;
-    filter:grayscale(15%);
-    transition:opacity 0.25s, filter 0.25s, transform 0.25s;
-  }
-  .hero .avatar:hover{
-    opacity:1;
-    filter:grayscale(0%);
-    transform:scale(1.04);
-  }
-  @media(max-width:600px){
-    .hero .avatar{width:64px;height:64px;top:24px}
-  }
+/* Header */
+.header { border-bottom:1px solid var(--border); padding-bottom:32px; margin-bottom:40px; }
+.header h1 { font-size:28px; font-weight:700; letter-spacing:0.02em; }
+.header .sub { font-size:14px; color:var(--text-dim); margin-top:4px; font-family:'JetBrains Mono',monospace; }
+.header .tagline { font-size:15px; color:var(--text-dim); margin-top:16px; line-height:1.7; }
 
-  /* METRICS BAR */
-  .metrics{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-    gap:1px;
-    background:var(--line);
-    margin:48px 0 0;
-    border:1px solid var(--line);
-  }
-  .metric{
-    background:var(--paper);
-    padding:20px 16px;
-    text-align:center;
-  }
-  .metric .num{font-size:24px;font-weight:700;letter-spacing:0.02em}
-  .metric .lbl{font-size:11px;color:var(--mute);margin-top:4px;letter-spacing:0.15em}
+/* Stats */
+.stats { display:flex; gap:24px; flex-wrap:wrap; margin:24px 0 40px; }
+.stat { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:16px 20px; flex:1; min-width:120px; text-align:center; }
+.stat .num { font-size:28px; font-weight:700; color:var(--accent); font-family:'JetBrains Mono',monospace; }
+.stat .label { font-size:11px; color:var(--text-dim); margin-top:4px; text-transform:uppercase; letter-spacing:0.08em; }
 
-  /* SECTION */
-  section{padding:64px 0;border-bottom:1px solid var(--line)}
-  section .label{
-    font-size:11px;color:var(--accent);
-    letter-spacing:0.4em;margin-bottom:24px;
-  }
-  section h2{font-size:24px;margin-bottom:32px}
-  section p{margin-bottom:16px}
+/* Section */
+h2 { font-size:13px; text-transform:uppercase; letter-spacing:0.12em; color:var(--accent); margin:48px 0 20px; font-family:'JetBrains Mono',monospace; }
+h2::before { content:'— '; color:var(--text-dim); }
 
-  /* PULL QUOTE */
-  .pull-quote{
-    padding:48px 0;
-    border-bottom:1px solid var(--line);
-    text-align:center;
-  }
-  .pull-quote blockquote{
-    font-size:clamp(18px,2.4vw,22px);
-    line-height:1.6;
-    color:var(--ink);
-    max-width:720px;
-    margin:0 auto;
-    font-weight:500;
-    letter-spacing:0.04em;
-  }
-  .pull-quote cite{
-    display:block;
-    margin-top:20px;
-    font-size:11px;
-    color:var(--mute);
-    letter-spacing:0.3em;
-    font-style:normal;
-  }
+/* Skills Grid */
+.skill-group { margin-bottom:28px; }
+.skill-group h3 { font-size:14px; color:var(--text-dim); margin-bottom:10px; font-weight:400; }
+.tags { display:flex; flex-wrap:wrap; gap:6px; }
+.tag { display:inline-block; font-size:12px; padding:4px 12px; border-radius:4px; border:1px solid var(--tag-border); background:var(--tag-bg); color:var(--accent); font-family:'JetBrains Mono',monospace; }
+.tag.core { border-color:rgba(34,197,94,0.4); background:rgba(34,197,94,0.08); color:var(--accent2); }
+.tag.exp { border-color:rgba(245,158,11,0.3); background:rgba(245,158,11,0.06); color:var(--accent3); }
 
-  /* DUAL AXIS */
-  .dual{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-    margin-top:32px;
-  }
-  .dual-col{
-    background:var(--paper);
-    padding:32px 24px;
-  }
-  .dual-col .axis-label{
-    font-size:11px;
-    color:var(--accent);
-    letter-spacing:0.3em;
-    margin-bottom:12px;
-  }
-  .dual-col h3{
-    font-size:18px;
-    margin-bottom:16px;
-    line-height:1.4;
-  }
-  .dual-col p{
-    font-size:14px;
-    color:var(--mute);
-    line-height:1.7;
-  }
-  @media(max-width:600px){
-    .dual{grid-template-columns:1fr}
-  }
+/* Timeline */
+.timeline { position:relative; padding-left:24px; }
+.timeline::before { content:''; position:absolute; left:6px; top:8px; bottom:8px; width:1px; background:var(--border); }
+.tl-item { position:relative; margin-bottom:28px; }
+.tl-item::before { content:''; position:absolute; left:-20px; top:8px; width:9px; height:9px; border-radius:50%; background:var(--accent); border:2px solid var(--bg); }
+.tl-year { font-size:12px; color:var(--accent); font-family:'JetBrains Mono',monospace; margin-bottom:2px; }
+.tl-title { font-size:15px; font-weight:600; }
+.tl-desc { font-size:13px; color:var(--text-dim); margin-top:4px; }
 
-  /* BRAND GRID */
-  .brands{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-  .brand{background:var(--paper);padding:24px}
-  .brand .nm{font-size:18px;font-weight:600;margin-bottom:6px}
-  .brand .role{font-size:11px;color:var(--accent);letter-spacing:0.3em;margin-bottom:12px}
-  .brand .desc{font-size:14px;color:var(--mute);line-height:1.6}
-  a.brand{text-decoration:none;color:inherit;display:block;transition:0.15s}
-  a.brand:hover{background:var(--ink);color:var(--paper)}
-  a.brand:hover .desc{color:#ccc}
+/* Table */
+.req-table { width:100%; border-collapse:collapse; margin:12px 0; font-size:13px; }
+.req-table th { text-align:left; padding:8px 12px; border-bottom:1px solid var(--border); color:var(--text-dim); font-weight:400; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; }
+.req-table td { padding:8px 12px; border-bottom:1px solid var(--border); }
+.req-table .level { font-family:'JetBrains Mono',monospace; font-size:14px; }
+.level-high { color:var(--accent2); }
+.level-mid { color:var(--accent); }
+.level-low { color:var(--accent3); }
 
-  /* CULTURAL ENGAGEMENT */
-  .cultural{
-    background:#f4f3ef;
-    border:1px solid var(--grid);
-    padding:32px;
-    margin-top:8px;
-  }
-  .cultural h3{
-    font-size:20px;
-    margin-bottom:8px;
-    letter-spacing:0.04em;
-  }
-  .cultural .sub{
-    font-size:12px;
-    color:var(--accent);
-    letter-spacing:0.3em;
-    margin-bottom:24px;
-  }
-  .cultural p{
-    font-size:15px;
-    margin-bottom:16px;
-  }
-  .cultural .deeds{
-    list-style:none;
-    margin-top:16px;
-    padding-left:0;
-  }
-  .cultural .deeds li{
-    padding:8px 0 8px 24px;
-    border-bottom:1px solid var(--grid);
-    position:relative;
-    font-size:14px;
-  }
-  .cultural .deeds li:before{
-    content:"○";
-    color:var(--accent);
-    position:absolute;
-    left:0;
-    font-size:11px;
-    top:12px;
-  }
-  .cultural .deeds li:last-child{border-bottom:none}
-  .cultural .cta-row{
-    margin-top:24px;
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-  }
-  .cultural .cta-row a{
-    display:inline-block;
-    padding:10px 18px;
-    border:1px solid var(--ink);
-    color:var(--ink);
-    text-decoration:none;
-    font-size:13px;
-    letter-spacing:0.1em;
-    transition:0.15s;
-  }
-  .cultural .cta-row a:hover{
-    background:var(--ink);
-    color:var(--paper);
-  }
+/* Project cards */
+.project { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:20px; margin-bottom:16px; }
+.project h3 { font-size:15px; font-weight:600; margin-bottom:4px; }
+.project .meta { font-size:12px; color:var(--text-dim); font-family:'JetBrains Mono',monospace; margin-bottom:8px; }
+.project p { font-size:13px; color:var(--text-dim); line-height:1.7; }
+.project .tech { margin-top:10px; }
 
-  /* CLIENT TABLE */
-  .clients{width:100%;border-collapse:collapse;margin-top:8px}
-  .clients td,.clients th{
-    padding:14px 8px;
-    border-bottom:1px solid var(--grid);
-    text-align:left;font-size:14px;
-  }
-  .clients th{font-size:11px;color:var(--mute);letter-spacing:0.2em;font-weight:500}
-  .clients tr:last-child td{border-bottom:none}
-  .clients .status{color:var(--accent);font-size:11px;letter-spacing:0.15em}
+/* Infra box */
+.infra { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:20px; font-family:'JetBrains Mono',monospace; font-size:13px; line-height:2; }
+.infra .key { color:var(--text-dim); }
+.infra .val { color:var(--accent); }
 
-  /* TECH SPEC */
-  .spec{font-family:"SF Mono","Consolas",monospace;font-size:13px;line-height:1.9;background:#f4f3ef;padding:24px;border:1px solid var(--grid);overflow-x:auto}
-  .spec .k{color:var(--mute)}
-  .spec .v{color:var(--ink)}
+/* Footer */
+.footer { margin-top:64px; padding-top:24px; border-top:1px solid var(--border); text-align:center; font-size:11px; color:var(--text-dim); }
 
-  /* LINK ROW */
-  .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px}
-  .links a{
-    color:var(--ink);text-decoration:none;
-    padding:16px;border:1px solid var(--line);
-    display:block;transition:0.15s;
-  }
-  .links a:hover{background:var(--ink);color:var(--paper)}
-  .links .ttl{font-size:14px;font-weight:600;margin-bottom:4px}
-  .links .url{font-size:11px;color:var(--mute);font-family:monospace}
-  .links a:hover .url{color:var(--paper)}
-
-  /* PRINCIPLES */
-  .principles{list-style:none}
-  .principles li{
-    padding:12px 0 12px 28px;
-    border-bottom:1px solid var(--grid);
-    position:relative;
-    font-size:15px;
-  }
-  .principles li:before{
-    content:"—";color:var(--accent);
-    position:absolute;left:0;font-weight:700;
-  }
-  .principles li:last-child{border-bottom:none}
-
-  /* CAREER */
-  .career{position:relative;padding-left:24px}
-  .career:before{content:"";position:absolute;left:8px;top:0;bottom:0;width:1px;background:var(--line)}
-  .career-item{position:relative;padding:12px 0 12px 16px;margin-bottom:8px}
-  .career-item:before{content:"";position:absolute;left:-21px;top:18px;width:9px;height:9px;background:var(--paper);border:2px solid var(--ink);border-radius:50%}
-  .career-item .yr{font-size:11px;color:var(--accent);letter-spacing:0.2em;font-family:monospace}
-  .career-item .ttl{font-size:15px;margin-top:4px}
-  .career-item .nt{font-size:13px;color:var(--mute);margin-top:2px}
-
-  /* CONTACT */
-  .contact{padding:64px 0}
-  .contact h2{margin-bottom:16px}
-  .contact .lead{font-size:18px;margin-bottom:32px;max-width:600px}
-  .contact a.cta{
-    display:inline-block;padding:16px 32px;
-    background:var(--ink);color:var(--paper);
-    text-decoration:none;font-size:14px;letter-spacing:0.2em;
-    transition:0.15s;
-  }
-  .contact a.cta:hover{background:var(--accent)}
-  .contact .sub{margin-top:24px;font-size:13px;color:var(--mute)}
-  .contact .sub a{color:var(--ink)}
-
-  /* FOOTER */
-  footer{padding:32px 0;font-size:12px;color:var(--mute);border-top:1px solid var(--line);text-align:center}
-  footer a{color:var(--mute)}
-
-  @media(max-width:600px){
-    .hero{padding:48px 0 40px}
-    section{padding:48px 0}
-    .clients td,.clients th{padding:10px 4px;font-size:13px}
-    .cultural{padding:24px 20px}
-  }
+@media(max-width:600px) {
+  .container { padding:24px 16px 60px; }
+  .stats { gap:12px; }
+  .stat { min-width:90px; padding:12px; }
+  .stat .num { font-size:22px; }
+  .header h1 { font-size:22px; }
+}
+@media print {
+  body { background:#fff; color:#111; }
+  .tag { border-color:#ccc; color:#333; background:#f5f5f5; }
+  .stat { border-color:#ddd; }
+  .stat .num { color:#1a365d; }
+}
 </style>
 </head>
 <body>
+<div class="container">
 
-<div class="wrap">
-
-<!-- HERO -->
-<header class="hero">
-  <img class="avatar" src="avatar.png" alt="高橋 秀夫" loading="lazy" decoding="async">
-  <div class="tag">PROFILE / DUAL ENGAGEMENT</div>
-  <h1>
-    高橋 秀夫
-    <span class="en">HIDEO TAKAHASHI &nbsp;·&nbsp; AIの町医者 × 白河の黒衣</span>
-  </h1>
-  <p class="lead">
-    異業種30年 × 1980年代IT基礎 × 2024年からのAI実装。<br>
-    自前GPU基盤と4ブランド体制で、<span class="accent">中小企業のAIを「現場の言葉」に翻訳する町医者。</span><br>
-    並行して、福島・白河で<span class="accent">三晶プロダクション後見役</span>として、AIに最も奪われない芸能（落語）を育てる側を勤めています。
-  </p>
-
-  <div class="metrics">
-    <div class="metric"><div class="num">6</div><div class="lbl">CLIENTS</div></div>
-    <div class="metric"><div class="num">4</div><div class="lbl">BRANDS</div></div>
-    <div class="metric"><div class="num">230+</div><div class="lbl">REPOS</div></div>
-    <div class="metric"><div class="num">4</div><div class="lbl">STORES</div></div>
-    <div class="metric"><div class="num">8,100</div><div class="lbl">RAG ENTRIES</div></div>
-    <div class="metric"><div class="num">1</div><div class="lbl">後見役 / 白河</div></div>
+<div class="header">
+  <h1>高橋 秀夫</h1>
+  <div class="sub">AI Infrastructure / Full-Stack AI Development / Project Management</div>
+  <div class="tagline">
+    1980年代のアセンブラから、2024年のGPU基盤まで。<br>
+    異業種30年の現場経験と、低レイヤー技術を基盤に、<br>
+    AI実装とプロジェクト統括を一貫して担う。
   </div>
-</header>
-
-<!-- POSITIONING (Dual-axis) -->
-<section>
-  <div class="label">POSITIONING</div>
-  <h2>町医者と黒衣 — 二本の柱で立つ</h2>
-  <p>
-    現代の経営顧問に求められる役割は、最新技術を解説することではなく、
-    <strong>最新技術に惑わされない判断軸を共に持つこと</strong>。
-    そして、AIで効率化を語る人間ほど、<strong>AIに最も奪われない領域</strong>に本気で投資している必要がある——
-    そう考え、二本の柱で立つ生き方を選んでいます。
-  </p>
-
-  <div class="dual">
-    <div class="dual-col">
-      <div class="axis-label">AXIS Ⅰ — AI実装</div>
-      <h3>AIの町医者として</h3>
-      <p>
-        自動車ディーラー、不動産、飲食、ドローン、音響——
-        AIネイティブ世代が持たない<strong>現場の段取り感覚</strong>を、
-        1980年代のIT基礎と現代のAIスタックで橋渡しする。
-        GPT/Claudeを単に使うのではなく、自前のGPUサーバ（RTX 5090 + RTX 5080）でローカルLLMを運用し、
-        4階層のルーティング設計で<strong>コスト・速度・データ主権</strong>を最適化する。
-      </p>
-    </div>
-    <div class="dual-col">
-      <div class="axis-label">AXIS Ⅱ — 文化後見</div>
-      <h3>白河の黒衣として</h3>
-      <p>
-        2026年、福島・白河で三晶プロダクション設立に企画段階から参画。
-        落語家・三遊亭円左衛門師匠を主宰に、<strong>若手落語家を世界へ送り出す事務所</strong>を、
-        道場・コンテスト・海外展開まで一体で設計。
-        社長職をお引き受けいただいたのは地域の有力者。自身は<strong>黒衣</strong>に徹し、運営と制度設計を裏方で担う。
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- PULL QUOTE -->
-<div class="wrap">
-<div class="pull-quote">
-  <blockquote>
-    AIに最も奪われない芸能と、<br>
-    AI戦略の現場を行き来する。<br>
-    両方の仕事の核は、<strong>自分を消すこと</strong>にある。
-  </blockquote>
-  <cite>— PHILOSOPHY</cite>
-</div>
 </div>
 
-<!-- BRANDS -->
-<section>
-  <div class="label">BRAND PORTFOLIO</div>
-  <h2>ラベル剥がし業 — 4本柱</h2>
-  <p style="margin-bottom:32px;color:var(--mute);font-size:14px">
-    それぞれが独立した事業体として、特定の<em>世間の偏見</em>を剥がすために設計されています。
-  </p>
-  <div class="brands">
-    <a class="brand" href="https://hideo-t.github.io/aidoctor/" target="_blank" rel="noopener">
-      <div class="nm">AIの町医者</div>
-      <div class="role">CONSULT ↗</div>
-      <div class="desc">「AIは無理」→「可能」<br>中小企業向けAI導入相談</div>
-    </a>
-    <a class="brand" href="https://hideo-t.github.io/negaibi-tesou/" target="_blank" rel="noopener">
-      <div class="nm">願い灯</div>
-      <div class="role">RETAIL × AI ↗</div>
-      <div class="desc">「AI占いは怪しい」→「怪しくない」<br>AI手相店舗、4店舗稼働中</div>
-    </a>
-    <a class="brand" href="https://hideo-t.github.io/worldkingjapan/" target="_blank" rel="noopener">
-      <div class="nm">ダメAI七福神</div>
-      <div class="role">CONTENT ↗</div>
-      <div class="desc">「失敗AIは無価値」→「面白くて正直」<br>キャラクター事業</div>
-    </a>
-    <a class="brand" href="https://hideo-t.github.io/worldkingjapan/" target="_blank" rel="noopener">
-      <div class="nm">デジタルゴミ拾い</div>
-      <div class="role">RESEARCH ↗</div>
-      <div class="desc">「Google=全て」→「外側にも世界がある」<br>非主流情報源の発掘</div>
-    </a>
-  </div>
-</section>
-
-<!-- CULTURAL ENGAGEMENT (NEW) -->
-<section>
-  <div class="label">CULTURAL ENGAGEMENT</div>
-  <h2>白河の黒衣 — 三晶プロダクション後見役</h2>
-
-  <div class="cultural">
-    <h3>三晶プロダクション / Mitsu Akira Production</h3>
-    <div class="sub">FOUNDED 2026.01 — SHIRAKAWA, FUKUSHIMA</div>
-    <p>
-      落語家・三遊亭円左衛門師匠を主宰とする、<strong>白河発の若手落語家育成事務所</strong>。
-      「白河から、落語のモンスターを」を志に、国内のみならずアジア・世界へ通用する才能を送り出すことを掲げる。
-    </p>
-    <p>
-      2026年1月の設立に企画段階から参画。社長職をお引き受けいただいたのは白河の地域有力者。
-      自身は<strong>創設プロデューサー（黒衣）</strong>として、運営・制度設計・サイト構築・海外展開枠組みを裏方で担う。
-    </p>
-
-    <ul class="deeds">
-      <li>落語道場「道場小路」設計・運営支援（2026年秋開講予定）</li>
-      <li>第1回 三晶プロダクション杯 落語コンテスト企画（2027年5月本選／海外の部含む）</li>
-      <li>サイト・LINE導線・サポーター制度設計</li>
-      <li>海外オンライン審査の枠組み構築（英語・現地語対応）</li>
-    </ul>
-
-    <div class="cta-row">
-      <a href="https://hideo-t.github.io/mitsuakira-pro/" target="_blank" rel="noopener">三晶プロダクション 公式サイト ↗</a>
-    </div>
-  </div>
-
-  <p style="margin-top:32px;color:var(--mute);font-size:14px;line-height:1.8">
-    落語はAIに最も奪われない芸能のひとつ。呼吸、間、即興、身体性——いずれもAIが置き換えられない領域に属する。
-    最も人間的なものに本気で投資しながら、AI領域で経営の意思決定を支援する。
-    この両極を矛盾なく往復することが、現代の経営顧問に求められる人格の幅であると考えている。
-  </p>
-</section>
-
-<!-- CLIENTS -->
-<section>
-  <div class="label">ACTIVE ENGAGEMENTS</div>
-  <h2>稼働中クライアント</h2>
-  <table class="clients">
-    <thead>
-      <tr><th>CLIENT</th><th>SCOPE</th><th>STATUS</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>株式会社パークホームズオキナワ</strong><br><span style="color:var(--mute);font-size:12px">トレーラーハウス製造・販売</span></td>
-        <td>FAQ/RAG基盤（8,100問）<br>サイトリニューアル / AI見積</td>
-        <td><span class="status">月額顧問</span></td>
-      </tr>
-      <tr>
-        <td><strong>株式会社ユアソリューションズ</strong><br><span style="color:var(--mute);font-size:12px">IT・SIer（仙台・東京）</span></td>
-        <td>Fractional CAIO / AI部門立ち上げ</td>
-        <td><span class="status">商談進行中</span></td>
-      </tr>
-      <tr>
-        <td><strong>三晶プロダクション</strong><br><span style="color:var(--mute);font-size:12px">落語事務所（白河）</span></td>
-        <td>創設プロデューサー・後見役<br>運営／制度設計／海外展開</td>
-        <td><span class="status">設立参画</span></td>
-      </tr>
-      <tr>
-        <td><strong>んだばい</strong><br><span style="color:var(--mute);font-size:12px">国際物販・演奏</span></td>
-        <td>国際デジタルマネージャー</td>
-        <td><span class="status">成果連動</span></td>
-      </tr>
-      <tr>
-        <td><strong>ふくとんぼ</strong><br><span style="color:var(--mute);font-size:12px">福祉事業</span></td>
-        <td>B型支援領域</td>
-        <td><span class="status">稼働中</span></td>
-      </tr>
-      <tr>
-        <td><strong>居酒屋 北海</strong><br><span style="color:var(--mute);font-size:12px">飲食</span></td>
-        <td>店舗運営支援</td>
-        <td><span class="status">稼働中</span></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- TECH INFRASTRUCTURE -->
-<section>
-  <div class="label">TECHNICAL INFRASTRUCTURE</div>
-  <h2>自前推論基盤「kamisama」</h2>
-  <p style="margin-bottom:24px">
-    クラウド依存ではなく、福島の自宅にGPUサーバを構築。
-    データ主権・コスト最適化・低レイテンシを同時に実現しています。
-  </p>
-  <div class="spec">
-<span class="k">SERVER       </span> <span class="v">kamisama @ 福島</span><br>
-<span class="k">GPU          </span> <span class="v">RTX 5090 (32GB) + RTX 5080 (16GB)</span><br>
-<span class="k">LOCAL LLM    </span> <span class="v">Nemotron-Nano-9B-JP : 8081</span><br>
-<span class="k">             </span> <span class="v">Gemma-3-12B         : 8082</span><br>
-<span class="k">             </span> <span class="v">llama.cpp backend</span><br>
-<span class="k">ROUTING      </span> <span class="v">Qwen Flash → DeepSeek → MiniMax → Claude Opus</span><br>
-<span class="k">GATEWAY      </span> <span class="v">OpenClaw</span><br>
-<span class="k">VOICE        </span> <span class="v">VOICEVOX</span><br>
-<span class="k">IMAGE        </span> <span class="v">Stable Diffusion (RTX 5090)</span><br>
-<span class="k">CODE ASSETS  </span> <span class="v">GitHub 230+ repositories</span><br>
-<span class="k">DAW (sub)    </span> <span class="v">MacBook Pro M2 Pro</span>
-  </div>
-</section>
-
-<!-- METHODOLOGY -->
-<section>
-  <div class="label">METHODOLOGY</div>
-  <h2>営業手法と事業ポリシー</h2>
-  <p style="margin-bottom:24px">
-    <strong>Show and Close</strong>——商談から数時間以内に動くプロトタイプを提示する手法。
-    原則は<strong>「主語・看板・設計の3点一致」</strong>。
-  </p>
-  <ul class="principles">
-    <li>下請けはしない</li>
-    <li>雇用関係を持たない</li>
-    <li>金銭条件を先に確定する</li>
-    <li>名誉職を引き受けない（後見役は実権を伴う裏方であり、名誉職ではない）</li>
-    <li>完全リモートを前提とする</li>
-    <li>象の力を借りるハエ — invisible × invisible = visible</li>
-    <li>白河では黒衣を勤める</li>
-  </ul>
-</section>
-
-<!-- CAREER -->
-<section>
-  <div class="label">CAREER</div>
-  <h2>経歴</h2>
-  <div class="career">
-    <div class="career-item">
-      <div class="yr">1980s</div>
-      <div class="ttl">IT（第1期）</div>
-      <div class="nt">アセンブラ、COBOL／基本情報技術者試験</div>
-    </div>
-    <div class="career-item">
-      <div class="yr">1990s — 2024</div>
-      <div class="ttl">異業種30年</div>
-      <div class="nt">自動車ディーラー（トヨタ系・営業／店長／本社企画課長）／不動産売買・賃貸／飲食店舗運用／産業ドローン運用／PA・DAW講師・編曲</div>
-    </div>
-    <div class="career-item">
-      <div class="yr">2024.10 —</div>
-      <div class="ttl">IT（第2期）／AI事業</div>
-      <div class="nt">AIの町医者 / PAPA として再起動。19ヶ月で6社稼働・4ブランド・GPU基盤・230リポを構築</div>
-    </div>
-    <div class="career-item">
-      <div class="yr">2026.01 —</div>
-      <div class="ttl">三晶プロダクション 創設参画 / 後見役</div>
-      <div class="nt">福島・白河発の落語家育成事務所。三遊亭円左衛門師匠を主宰に、若手育成と海外展開の制度設計を裏方で担う</div>
-    </div>
-  </div>
-</section>
-
-<!-- PUBLIC ASSETS -->
-<section>
-  <div class="label">PUBLIC ASSETS</div>
-  <h2>公開資産・メディア</h2>
-  <div class="links">
-    <a href="https://hideo-t.github.io/aidoctor/" target="_blank" rel="noopener">
-      <div class="ttl">AIの町医者（フロント）</div>
-      <div class="url">hideo-t.github.io/aidoctor/</div>
-    </a>
-    <a href="https://hideo-t.github.io/mitsuakira-pro/" target="_blank" rel="noopener">
-      <div class="ttl">三晶プロダクション 公式</div>
-      <div class="url">hideo-t.github.io/mitsuakira-pro/</div>
-    </a>
-    <a href="https://hideo-t.github.io/worldkingjapan/" target="_blank" rel="noopener">
-      <div class="ttl">世界王 WORLD KING</div>
-      <div class="url">作品集・40+ AI実装ポートフォリオ</div>
-    </a>
-    <a href="https://github.com/hideo-t" target="_blank" rel="noopener">
-      <div class="ttl">GitHub（230+ repos）</div>
-      <div class="url">github.com/hideo-t</div>
-    </a>
-    <a href="https://youtube.com/channel/UCt-pc_NlSK8X2K1ZPX6InCg" target="_blank" rel="noopener">
-      <div class="ttl">AIの町医者ニュース</div>
-      <div class="url">YouTube・毎日更新</div>
-    </a>
-    <a href="https://sites.google.com/wkjp.net/negaibi" target="_blank" rel="noopener">
-      <div class="ttl">願い灯（AI手相）</div>
-      <div class="url">FC加盟受付中・4店舗稼働</div>
-    </a>
-    <a href="https://hideo-t.github.io/negaibi-tesou/" target="_blank" rel="noopener">
-      <div class="ttl">願い灯 本店</div>
-      <div class="url">福島県白河市五郎窪38-1</div>
-    </a>
-    <a href="#contact">
-      <div class="ttl">ウルトラFM 86.8MHz</div>
-      <div class="url">毎週金 19:00 レギュラー放送</div>
-    </a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact" style="border-bottom:none">
-  <div class="label">CONTACT</div>
-  <h2>ご相談・お問い合わせ</h2>
-  <p class="lead">
-    Fractional CAIO、AI事業立ち上げ、サイトリニューアル、自動化・省力化のご相談を承ります。
-    地域文化基盤・後見役としてのご相談も、内容により承ります。<br>
-    金銭条件を先に確定する方針のため、ご相談時にご予算感をお伝えください。
-  </p>
-  <a class="cta" href="mailto:hdxrope@gmail.com">EMAIL でご相談</a>
-  <div class="sub">
-    Email: <a href="mailto:hdxrope@gmail.com">hdxrope@gmail.com</a><br>
-    所在地: 福島県白河市萱根長木原5-1<br>
-    対応エリア: 全国（完全リモート可、必要に応じて出張）
-  </div>
-</section>
-
+<div class="stats">
+  <div class="stat"><div class="num">260+</div><div class="label">GitHub Repos</div></div>
+  <div class="stat"><div class="num">8,100</div><div class="label">RAG Entries</div></div>
+  <div class="stat"><div class="num">33+</div><div class="label">API Endpoints</div></div>
+  <div class="stat"><div class="num">20yr</div><div class="label">Auto Industry</div></div>
 </div>
 
-<footer>
-  © 2026 高橋秀夫 / AIの町医者 × 白河の黒衣 — Last updated: 2026.05
-</footer>
+<!-- GPU / AI -->
+<h2>GPU・AI基盤</h2>
+<div class="skill-group">
+  <h3>コア技術（実戦運用中）</h3>
+  <div class="tags">
+    <span class="tag core">NVIDIA CUDA 12.x</span>
+    <span class="tag core">cuDNN</span>
+    <span class="tag core">PyTorch</span>
+    <span class="tag core">RTX 5090 (32GB)</span>
+    <span class="tag core">RTX 5080 (16GB)</span>
+    <span class="tag core">llama.cpp</span>
+    <span class="tag core">Stable Diffusion</span>
+    <span class="tag core">OpenCV 4.12</span>
+    <span class="tag core">VOICEVOX</span>
+  </div>
+</div>
+<div class="skill-group">
+  <h3>GPU運用実績</h3>
+  <div class="tags">
+    <span class="tag">異種GPU混在負荷分散</span>
+    <span class="tag">フェイルオーバー設計</span>
+    <span class="tag">自動復旧機構</span>
+    <span class="tag">FP4/FP8量子化</span>
+    <span class="tag">Tensor Parallelism</span>
+    <span class="tag">sm_120エラー対応</span>
+    <span class="tag">ドライバー互換性問題解決</span>
+  </div>
+</div>
+<div class="skill-group">
+  <h3>LLM・マルチモーダル</h3>
+  <div class="tags">
+    <span class="tag">ローカルLLMサービング</span>
+    <span class="tag">4階層ルーティング（6社AI統合）</span>
+    <span class="tag">RAGチャットボット</span>
+    <span class="tag">画像生成パイプライン</span>
+    <span class="tag">3Dモデル生成（TripoSR/TRELLIS）</span>
+    <span class="tag">コンピュータビジョン</span>
+    <span class="tag">音声合成パイプライン</span>
+    <span class="tag">自動コンテンツ配信</span>
+  </div>
+</div>
 
+<!-- Dev -->
+<h2>開発スタック</h2>
+<div class="skill-group">
+  <h3>言語・フレームワーク</h3>
+  <div class="tags">
+    <span class="tag core">Python</span>
+    <span class="tag core">FastAPI / Uvicorn</span>
+    <span class="tag core">Jinja2</span>
+    <span class="tag core">Bash</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">HTML / CSS</span>
+    <span class="tag">SQL</span>
+    <span class="tag exp">アセンブラ（IBM汎用機）</span>
+    <span class="tag exp">COBOL</span>
+  </div>
+</div>
+<div class="skill-group">
+  <h3>インフラ・ネットワーク</h3>
+  <div class="tags">
+    <span class="tag core">Linux (Ubuntu)</span>
+    <span class="tag core">Cloudflare Tunnel / Workers</span>
+    <span class="tag">Docker</span>
+    <span class="tag">GitHub / Git</span>
+    <span class="tag">DNS</span>
+    <span class="tag">Windows Server</span>
+    <span class="tag">macOS</span>
+    <span class="tag exp">AWS EC2（基礎）</span>
+  </div>
+</div>
+<div class="skill-group">
+  <h3>連携・自動化</h3>
+  <div class="tags">
+    <span class="tag">LINE Messaging API / LIFF</span>
+    <span class="tag">Google Apps Script</span>
+    <span class="tag">Stripe決済</span>
+    <span class="tag">REST API設計</span>
+    <span class="tag">YouTube API</span>
+    <span class="tag">RSS / スクレイピング</span>
+    <span class="tag">cron / タスクスケジューラ</span>
+    <span class="tag">Power Automate</span>
+  </div>
+</div>
+
+<!-- PM -->
+<h2>プロジェクトマネジメント</h2>
+<table class="req-table">
+  <tr><th>領域</th><th>経験</th><th>level</th></tr>
+  <tr><td>チーム統括・マネジメント</td><td>12拠点長の統括、新人研修企画・実施</td><td class="level level-high">◎</td></tr>
+  <tr><td>顧客折衝・提案</td><td>メーカー担当との折衝、イベント企画〜実行</td><td class="level level-high">◎</td></tr>
+  <tr><td>予算・工程管理</td><td>年間予算策定、工程管理、フィードバック</td><td class="level level-high">◎</td></tr>
+  <tr><td>大規模現場統括</td><td>音響PA：数十名スタッフ統括、逆算スケジュール</td><td class="level level-high">◎</td></tr>
+  <tr><td>高速プロトタイピング</td><td>ヒアリング→動作プロトタイプ 最短24h</td><td class="level level-high">◎</td></tr>
+  <tr><td>基本設計・詳細設計</td><td>AI Webアプリケーション（33+エンドポイント）</td><td class="level level-high">◎</td></tr>
+  <tr><td>セキュリティ設計</td><td>CORS/SSRF/CSRF/DoS対策実装</td><td class="level level-mid">○</td></tr>
+</table>
+
+<!-- Industry -->
+<h2>業界ドメイン知識</h2>
+<table class="req-table">
+  <tr><th>業界</th><th>経験年数</th><th>depth</th></tr>
+  <tr><td>自動車（販売店・メーカー折衝・基幹システム）</td><td>20年</td><td class="level level-high">◎</td></tr>
+  <tr><td>金融（汎用機開発）</td><td>4年</td><td class="level level-mid">○</td></tr>
+  <tr><td>不動産（売買・管理）</td><td>数年</td><td class="level level-mid">○</td></tr>
+  <tr><td>飲食（店舗運営）</td><td>数年</td><td class="level level-mid">○</td></tr>
+  <tr><td>音響（PA・DAW・レコーディング）</td><td>10年+</td><td class="level level-high">◎</td></tr>
+  <tr><td>福祉（障害者支援）</td><td>数年</td><td class="level level-mid">○</td></tr>
+</table>
+
+<!-- Infra -->
+<h2>自前推論基盤</h2>
+<div class="infra">
+  <span class="key">SERVER</span> <span class="val">kamisama @ Fukushima</span><br>
+  <span class="key">GPU-1</span> <span class="val">NVIDIA RTX 5090 — 32GB VRAM</span><br>
+  <span class="key">GPU-2</span> <span class="val">NVIDIA RTX 5080 — 16GB VRAM</span><br>
+  <span class="key">STACK</span> <span class="val">CUDA 12.x / cuDNN / PyTorch / llama.cpp</span><br>
+  <span class="key">LLM</span> <span class="val">Nemotron-Nano-9B-JP / Gemma-3-12B / Qwen2.5-7B</span><br>
+  <span class="key">ROUTING</span> <span class="val">4-tier: Qwen Flash → DeepSeek → MiniMax → Claude Opus</span><br>
+  <span class="key">IMAGE</span> <span class="val">Stable Diffusion WebUI (ComfyUI)</span><br>
+  <span class="key">VOICE</span> <span class="val">VOICEVOX</span><br>
+  <span class="key">NETWORK</span> <span class="val">Cloudflare Tunnel / Workers</span><br>
+  <span class="key">CODE</span> <span class="val">GitHub 260+ repositories</span>
+</div>
+
+<!-- Projects -->
+<h2>実績（匿名）</h2>
+
+<div class="project">
+  <h3>製造メーカー向け RAGチャットボット</h3>
+  <div class="meta">2026 — 月額顧問契約</div>
+  <p>8,100問規模のFAQ/RAGチャットボット構築。サイトフルリニューアル、AI自動見積システム設計。契約から1週間でサイト＋chatbot稼働。</p>
+  <div class="tags tech">
+    <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Claude API</span><span class="tag">DeepSeek</span><span class="tag">Cloudflare</span>
+  </div>
+</div>
+
+<div class="project">
+  <h3>マルチモーダルAI統合サービス</h3>
+  <div class="meta">2025 — 4店舗展開</div>
+  <p>画像解析（OpenCV）×LLM推論×3Dモデル生成×音声合成を統合。33+ APIエンドポイント、5言語i18n、LINE LIFF統合、Stripe決済。ThreadPoolExecutor並列処理、Watchdogタイムアウト制御。セキュリティ（CORS/SSRF/パストラバーサル/DoS）実装。</p>
+  <div class="tags tech">
+    <span class="tag">FastAPI</span><span class="tag">OpenCV</span><span class="tag">Stable Diffusion</span><span class="tag">TripoSR</span><span class="tag">LINE LIFF</span><span class="tag">GAS</span>
+  </div>
+</div>
+
+<div class="project">
+  <h3>自動コンテンツ生成・配信パイプライン</h3>
+  <div class="meta">2026 — 完全自動運用中</div>
+  <p>ニュース収集→AI要約→音声合成→動画生成→YouTube自動投稿のフルパイプライン。1日5カテゴリ、人的介入ゼロで継続運用。6社AIプロバイダー統合基盤上で稼働。</p>
+  <div class="tags tech">
+    <span class="tag">Python</span><span class="tag">VOICEVOX</span><span class="tag">FFmpeg</span><span class="tag">YouTube API</span><span class="tag">OpenClaw</span>
+  </div>
+</div>
+
+<div class="project">
+  <h3>GPU推論基盤「kamisama」設計・構築</h3>
+  <div class="meta">2024.10 — 運用中</div>
+  <p>RTX 5090+5080異種混在環境をゼロから設計。CUDA/cuDNN/PyTorch環境構築、ローカルLLMサービング、GPU障害フェイルオーバー、負荷分散、自動復旧を実装。ドライバー互換性問題の実戦的トラブルシューティング。</p>
+  <div class="tags tech">
+    <span class="tag">CUDA</span><span class="tag">PyTorch</span><span class="tag">llama.cpp</span><span class="tag">Linux</span><span class="tag">Cloudflare Tunnel</span>
+  </div>
+</div>
+
+<!-- Career -->
+<h2>経歴</h2>
+<div class="timeline">
+  <div class="tl-item">
+    <div class="tl-year">1989 — 1993</div>
+    <div class="tl-title">IBM汎用機 金融系システム開発</div>
+    <div class="tl-desc">アセンブラ・COBOLでの設計・開発。基本情報技術者試験取得。</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-year">1993 — 2013</div>
+    <div class="tl-title">自動車ディーラー（営業→店長→本社企画）</div>
+    <div class="tl-desc">約20年。店長12名統括、メーカー折衝、全社イベント企画〜実行。販売店基幹システムを20年間実務利用。</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-year">2013 — 2024</div>
+    <div class="tl-title">複数業種での事業運営</div>
+    <div class="tl-desc">不動産、飲食、福祉、音響エンジニア（PA・DAW講師）。多業種の現場経験を蓄積。</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-year">2024.10 —</div>
+    <div class="tl-title">AI事業 再起動</div>
+    <div class="tl-desc">GPU基盤構築、AIアプリ開発、月額顧問契約。19ヶ月で260+リポジトリ、複数クライアント稼働。</div>
+  </div>
+</div>
+
+<div class="footer">
+  高橋秀夫 — Technical Profile<br>
+  福島県白河市 / 完全リモート可・出張対応<br>
+  Last updated: 2026.05
+</div>
+
+</div>
 </body>
 </html>
